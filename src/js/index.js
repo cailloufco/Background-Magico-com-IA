@@ -42,14 +42,6 @@ form.addEventListener("submit", async function (event) {
       dados = { html: textoResposta };
     }
 
-    console.log("Resposta da API (raw text):", textoResposta);
-    console.log("Resposta da API (parsed):", dados);
-
-    // Mostrar a resposta bruta para ajudar a depuração
-    const rawEl = document.getElementById("raw-response");
-    if (rawEl)
-      rawEl.textContent = textoResposta || JSON.stringify(dados, null, 2);
-
     // Função para extrair campos comuns de html/css de respostas variadas
     function extractHtmlCss(obj) {
       let html = "";
